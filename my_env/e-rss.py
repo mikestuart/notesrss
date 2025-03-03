@@ -40,6 +40,13 @@ def generate_rss():
 
 app = Flask(__name__)
 
+
+@app.route('/')
+def index():
+    indexpage = "<h1>Mikes X13 Notes RSS</h1>"
+    indexpage += '<p>This is a <a href="/rss">simple RSS feed</a> of the 10 most recent notes saved to Evernote.</p>'
+    return indexpage  
+
 @app.route('/rss')
 def rss_feed():
     """Serve the generated RSS feed."""

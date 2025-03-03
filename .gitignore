@@ -1,1 +1,10 @@
 activate.bat
+# Ignore Python virtual environments & dependencies
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+my_env/
+env/
+venv/
+Lib/site-packages/

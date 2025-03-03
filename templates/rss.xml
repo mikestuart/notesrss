@@ -1,0 +1,22 @@
+<!-- templates/rss.xml -->
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+  <title>{{ blog_title }}</title>
+  <link>{{ blog_url }}</link>
+  <description>Exported Evernote Notes</description>
+  {% for post in posts %}
+  <item>
+    <title>{{ post.title }}</title>
+    <link>{{ blog_url }}/{{ post.slug }}/</link>
+    <guid>{{ blog_url }}/{{ post.slug }}/</guid>
+    <pubDate>{{ post.date }}</pubDate>
+    {% if post.rss_mode == 'full' %}
+    <description><![CDATA[{{ post.content }}]]></description>
+    {% else %}
+    <description>{{ post.content|striptags|truncate(200) }}</description>
+    {% endif %}
+  </item>
+  {% endfor %}
+</channel>
+</rss>

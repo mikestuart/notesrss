@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "DEV"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "EvernoteRSS"
+	}
+}

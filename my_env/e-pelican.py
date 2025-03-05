@@ -13,10 +13,14 @@ ARTICLES_DIR = get_notes_folder()
 PELICAN_CONTENT_DIR = "content"
 PELICAN_OUTPUT_DIR = "output"
 PELICAN_CONFIG_FILE = "pelicanconf.py"
-#DEFAULT_THEME = "notmyidea" 
+DEFAULT_THEME = "themes/notmyidea" 
 #DEFAULT_THEME = "themes/flex"  
-DEFAULT_THEME = "themes/gum" 
-
+#DEFAULT_THEME = "themes/gum" 
+#DEFAULT_THEME = "themes/elegant" 
+#DEFAULT_THEME = "themes/octopress" 
+#DEFAULT_THEME = "themes/wilson" 
+#DEFAULT_THEME = "themes/atilla" 
+#DEFAULT_THEME = "themes/hyde" 
 
 def create_pelican_config():
     """

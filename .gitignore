@@ -8,3 +8,5 @@ my_env/
 env/
 venv/
 Lib/site-packages/
+# Local Netlify folder
+.netlify

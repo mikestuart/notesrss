@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Evernote Notes Blog (Pelican)</title><link>http://localhost:5500/output/</link><description></description><lastBuildDate>Tue, 19 Nov 2024 00:00:00 +0000</lastBuildDate><item><title>Top 10 Hacks for ChatGPT by OpenAI's Nick Turley</title><link>http://localhost:5500/output/top-10-hacks-for-chatgpt-by-openais-nick-turley.html</link><description>
+<rss version="2.0"><channel><title>Evernote Notes Blog (Pelican)</title><link>https://test.evernoterss.com/</link><description></description><lastBuildDate>Tue, 19 Nov 2024 00:00:00 +0000</lastBuildDate><item><title>Top 10 Hacks for ChatGPT by OpenAI's Nick Turley</title><link>https://test.evernoterss.com/top-10-hacks-for-chatgpt-by-openais-nick-turley.html</link><description>
 
 
 &lt;html lang="en"&gt;
@@ -17,7 +17,7 @@
  Unlocking the Full Potential of ChatGPT: Tips from OpenAI's Nick Turley
 &lt;/h3&gt;
 &lt;p&gt;
- Many people use ChatGPT for tasks like creating recipes or writing work emails, but OpenAI's Head of Product, Nick Turley, has shared some …&lt;/p&gt;&lt;/body&gt;&lt;/head&gt;&lt;/html&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Unknown Author</dc:creator><pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:localhost,2024-11-19:/output/top-10-hacks-for-chatgpt-by-openais-nick-turley.html</guid><category>Evernote Notes</category></item><item><title>Top 10 Amazing things AI can do for you today!</title><link>http://localhost:5500/output/top-10-amazing-things-ai-can-do-for-you-today.html</link><description>
+ Many people use ChatGPT for tasks like creating recipes or writing work emails, but OpenAI's Head of Product, Nick Turley, has shared some …&lt;/p&gt;&lt;/body&gt;&lt;/head&gt;&lt;/html&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Unknown Author</dc:creator><pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:test.evernoterss.com,2024-11-19:/top-10-hacks-for-chatgpt-by-openais-nick-turley.html</guid><category>Evernote Notes</category></item><item><title>Top 10 Amazing things AI can do for you today!</title><link>https://test.evernoterss.com/top-10-amazing-things-ai-can-do-for-you-today.html</link><description>
 
 
 &lt;html lang="en"&gt;
@@ -38,4 +38,4 @@
 &lt;hr /&gt;
 &lt;h3&gt;
 &lt;b&gt;
-  1 …&lt;/b&gt;&lt;/h3&gt;&lt;/body&gt;&lt;/head&gt;&lt;/html&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Unknown Author</dc:creator><pubDate>Mon, 18 Nov 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:localhost,2024-11-18:/output/top-10-amazing-things-ai-can-do-for-you-today.html</guid><category>Evernote Notes</category><category>published</category></item></channel></rss>
+  1 …&lt;/b&gt;&lt;/h3&gt;&lt;/body&gt;&lt;/head&gt;&lt;/html&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Unknown Author</dc:creator><pubDate>Mon, 18 Nov 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:test.evernoterss.com,2024-11-18:/top-10-amazing-things-ai-can-do-for-you-today.html</guid><category>Evernote Notes</category><category>published</category></item></channel></rss>

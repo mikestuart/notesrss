@@ -28,7 +28,7 @@ def create_pelican_config():
     """
     config_content = f"""
 SITENAME = 'Evernote Notes Blog (Pelican)'
-SITEURL = 'http://localhost:5500/output'  # Adjust this when deploying
+SITEURL = 'https://test.evernoterss.com'  # Adjust this when deploying
 
 PATH = '{PELICAN_CONTENT_DIR}'
 TIMEZONE = 'UTC'
@@ -37,8 +37,8 @@ THEME = '{DEFAULT_THEME}'
 FEED_ALL_RSS = 'feeds/all.rss.xml'
 DEFAULT_PAGINATION = 10
 AUTHOR = "Evernote User" 
-STATIC_PATHS = ['articles']
-STATIC_EXCLUDE_SOURCES = True 
+STATIC_PATHS = ['articles'] 
+STATIC_EXCLUDE_SOURCES = True
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = []
     """
@@ -58,6 +58,14 @@ def process_article_directory():
         if os.path.isdir(guid_path):
             print(f"Processing article with GUID: {guid}")
             process_note_guid(guid_path, guid)
+    
+    # Manually copy the articles directory to the output directory
+    output_articles_dir = os.path.join(PELICAN_OUTPUT_DIR, 'articles')
+    if os.path.exists(output_articles_dir):
+        shutil.rmtree(output_articles_dir)
+    shutil.copytree(ARTICLES_DIR, output_articles_dir)
+    print(f"✅ Articles directory copied to: {output_articles_dir}")
+
 
 def process_note_guid(guid_path, guid):
     """

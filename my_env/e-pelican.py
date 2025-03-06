@@ -5,6 +5,7 @@ import json
 import shutil
 from datetime import datetime
 from utils.file_utils import get_notes_folder
+from utils.html_summary import hmtl_summary
 from pelican import main as pelican_main
 from bs4 import BeautifulSoup
 
@@ -30,17 +31,20 @@ def create_pelican_config():
 SITENAME = 'Evernote Notes Blog (Pelican)'
 SITEURL = 'https://test.evernoterss.com'  # Adjust this when deploying
 
-PATH = '{PELICAN_CONTENT_DIR}'
+PATH = 'content'
 TIMEZONE = 'UTC'
 DEFAULT_LANG = 'en'
-THEME = '{DEFAULT_THEME}'
+THEME = 'themes/notmyidea'
 FEED_ALL_RSS = 'feeds/all.rss.xml'
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
 DEFAULT_PAGINATION = 10
-AUTHOR = "Evernote User" 
-STATIC_PATHS = ['articles'] 
+AUTHOR = "Evernote User"
+STATIC_PATHS = ['articles']
 STATIC_EXCLUDE_SOURCES = True
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = []
+SUMMARY_MAX_LENGTH = 50  # Adjust this value as needed
+RSS_FEED_SUMMARY_ONLY = True  # Include full content in RSS feed
     """
 
     with open(PELICAN_CONFIG_FILE, 'w', encoding='utf-8', newline='\n') as f:
@@ -90,6 +94,9 @@ def process_note_guid(guid_path, guid):
     with open(note_html_file, 'r', encoding='utf-8') as f:
         note_content = f.read()
 
+    # Generate summary using html_summary function
+    summary = hmtl_summary(note_html_file)    
+
     # **Keep images and attachments inside each note folder!**
     soup = BeautifulSoup(note_content, "html.parser")
 
@@ -115,6 +122,7 @@ def process_note_guid(guid_path, guid):
     <meta name="author" content="{author}">
     <meta name="category" content="Evernote Notes">
     <meta name="status" content="published">
+    <meta name="summary" content="{summary}">
 </head>
 <body>
 {str(soup)}  <!-- Includes preserved images & attachments -->

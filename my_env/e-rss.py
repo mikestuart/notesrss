@@ -44,7 +44,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     indexpage = "<h1>Mikes X13 Notes RSS</h1>"
-    indexpage += '<p>This is a <a href="/rss">simple RSS feed</a> of the 10 most recent notes saved to Evernote.</p>'
+    indexpage += '<p>This is a <a href="/rss">simple RSS feed</a> of the 10 most recent notes saved to Evernote</p>'
+    indexpage += '<p>NETLIFY <a href="https://test.evernoterss.com">Blog/RSS feed</a> of Evernote Notes</p>'
     return indexpage  
 
 @app.route('/rss')

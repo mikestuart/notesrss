@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="title" content="Faces on the news">
+    <meta name="tags" content="news, chatgpt, perplexity, niche, today,Positive">
+    <meta name="date" content="2025-01-12">
+    <meta name="author" content="Unknown Author">
+    <meta name="category" content="Evernote Notes">
+    <meta name="status" content="published">
+    <meta name="summary" content="depending on the niche the tool still gives either today’s news or news close to the date, unfortunately I can’t fix it yet. 3. perplexity finds media related to the niche (like this step, cause you can find most interesting news there) and searches for news. 2. chatgpt writes queries relevant to the niche + today’s date and sends them to perplexity.">
+</head>
+<body>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Faces on the news</title>
+</head>
+<body>
+<p>
+ I combined chatGPT, perplexity and python to write news summaries
+</p>
+<p>
+ the idea is to type in the niche (like “AI” or “video games” or “fitness”) and get related news for today. It works like this:
+</p>
+<p>
+ 1. python node defines today’s date and sends it to chatgpt.
+</p>
+<p>
+ 2. chatgpt writes queries relevant to the niche + today’s date and sends them to perplexity.
+</p>
+<p>
+ 3. perplexity finds media related to the niche (like this step, cause you can find most interesting news there) and searches for news.
+</p>
+<p>
+ 4. another chatgpt node summarizes and rewrites each news item into one sentence. It was tought to reach, cause sometimes gpt tries to give either too little or too much context.
+</p>
+<p>
+ 5. after the list of news, it adds the list of sources.
+</p>
+<p>
+ depending on the niche the tool still gives either today’s news or news close to the date, unfortunately I can’t fix it yet.
+</p>
+<p>
+ I’ll share json file in comments, if someone is interested in details and wants to customize it with some other ai models (or hopefully help me with prompting for perplexity). 
+</p>
+<p>
+ ps I want to make a daily podcast with the news but still choosing the tool for it.
+</p>
+</body>
+</html>  <!-- Includes preserved images & attachments -->
+</body>
+</html>

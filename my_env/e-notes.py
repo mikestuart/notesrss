@@ -14,7 +14,7 @@ import posixpath
 from datetime import datetime
 from bs4 import BeautifulSoup
 
-# Evernote imports (example)
+# Evernote client import
 from evernote_client.client import fetch_notes, fetch_note_content, fetch_resource_data, note_store
 
 # Local utilities
@@ -63,7 +63,7 @@ def save_note_as_html(note_metadata):
         except Exception as e:
             print(f"⚠️ Error retrieving tags: {e}")
     else:
-        print("⚠️ No tags found for this note.")
+        note_tags = []
 
     # Prepare folders
     note_folder = os.path.join(ARTICLES_DIR, note_guid)
@@ -141,7 +141,7 @@ def save_note_as_html(note_metadata):
         "guid": note_guid,
         "created_at": note_created,
         "tags": note_tags
-    }
+       }
     with open(os.path.join(note_folder, "metadata.json"), "w", encoding="utf-8") as meta_file:
         json.dump(metadata, meta_file, indent=4)
 

@@ -1,4 +1,5 @@
-# e-blog.py
+# Python script to make a blog from a directory of html notes images attachments
+# made by e-notes.py. Uses metadata.json to extract title, tags, author, summary,
 
 from flask import Flask, render_template, send_from_directory, abort
 from utils.file_utils import get_notes_folder
@@ -22,6 +23,8 @@ def index():
                     notes.append({
                         "guid": metadata.get("guid", note_folder),
                         "title": metadata.get("title", "Untitled Note"),
+                        "summary": metadata.get("summary", "No summary available."),
+                        "author": metadata.get("author", "Unknown Author"),
                         "created_at": metadata.get("created_at", "Unknown Date"),
                         "tags": metadata.get("tags", [])
                     })

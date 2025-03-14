@@ -1,11 +1,18 @@
-# pelican_simple_blog.py
+# Pelican Python Script to generate a static blog from Evernote notes
+# Static blog with theme and RSS support Python 3.10 compatible 
+# Reads a direcory of html notes images attachments made by enotes.py
+# Uses metadata.json to extract title, tags, author, summary, sentiment, keywords
+# TODO: Pelican to Netify Part Two
+# TODO: --note_sync_index.json to keep track of notes already processed
+# TODO: --add sync and archive notes features
+# TODO: --create py script to update NETLIFY vs cli
 
 import os
 import json
 import shutil
 from datetime import datetime
 from utils.file_utils import get_notes_folder
-from utils.html_summary import hmtl_summary
+from utils.html_summary import html_summary, analyze_sentiment, extract_keywords
 from pelican import main as pelican_main
 from bs4 import BeautifulSoup
 
@@ -95,7 +102,10 @@ def process_note_guid(guid_path, guid):
         note_content = f.read()
 
     # Generate summary using html_summary function
-    summary = hmtl_summary(note_html_file)    
+    summary = html_summary(note_html_file)
+    sentiment = analyze_sentiment(note_html_file)
+    keywords = extract_keywords(note_html_file)
+    tags = keywords + "," + sentiment  
 
     # **Keep images and attachments inside each note folder!**
     soup = BeautifulSoup(note_content, "html.parser")

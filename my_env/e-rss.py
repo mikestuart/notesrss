@@ -1,3 +1,5 @@
+# Python Script to generate an RSS from notes folder
+
 import os
 from datetime import datetime, timezone  
 from flask import Flask, Response

@@ -1,3 +1,13 @@
+# Python Script to generate html notes from Evernote notes
+# Evernote SDK Python 3.10 compatible 
+# Exports html notes images attachments into artcles folder
+# Uses metadata.json for title, tags, author, summary, sentiment, keywords
+# TODO: Loop for each user and access token
+# TODO: --read mysql db for user notebook publish tag theme
+# TODO: --add mysql status and messageing for each step
+# TODO: --add python alrert logging via SES STMP and Trillo SMS
+# TODO: --deploy e-notes, e-pelican to Azure functions
+
 import os
 import json
 import posixpath
